@@ -41,17 +41,29 @@ class Television
 	# 	end
 	# end
 
+	def mute
+		"the volume has been muted"
+	end
 
-# this is not really working
-	def select
-		puts "Please select a channel or press [q] to turn the TV off!"
-		choice = gets.chomp.to_i
+	def unmute
+		"the volume is on again"
+	end
 
-		if choice != "q"
-			undef select	
-		else
-		puts "You chose channel #{@channel}" 
-		end
+
+# this is not really working so i will just leave it to turn on and turn off
+	# def select
+	# 	puts "Please select a channel or press [q] to turn the TV off!"
+	# 	choice = gets.chomp.to_i
+
+	# 	if choice != "q"
+	# 		undef select	
+	# 	else
+	# 	puts "You chose channel #{@channel}" 
+	# 	end
+	# end
+
+	def off
+		puts "you are now turning the TV off"
 	end
 
 				
@@ -59,9 +71,13 @@ end
 
 television = Television.new(45)
 puts television
-puts television.select
-# puts television.final_channel
-# puts television.final_volume(5)
+# puts television.select
+puts television.final_channel
+puts television.final_volume(5)
+puts television.mute
+puts television.unmute
+
+puts television.off
 
 
 
